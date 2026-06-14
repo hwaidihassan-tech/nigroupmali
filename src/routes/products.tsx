@@ -24,9 +24,9 @@ const products = [
   {
     image: adhesive,
     cat: "Tile Adhesive",
-    name: "NI Bond Standard",
-    desc: "Cement-based powder adhesive for ceramic tiles on walls and floors. Strong grip and easy mixing.",
-    specs: ["25 kg bag", "Interior use", "Open time: 20 min"],
+    name: "NI-Group Ciment-Colle",
+    desc: "High-performance cement-based tile adhesive for interior & exterior floors and walls. Spanish-quality formula adapted to Malian climate.",
+    specs: ["25 kg bag", "Interior & exterior · Sols & Murs", "Open time: 20 min", "CE / C2 TE · A+ rated"],
   },
   {
     image: adhesive,
