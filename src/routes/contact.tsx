@@ -70,16 +70,16 @@ function Contact() {
             Zone Industrielle<br />Bamako, Mali
           </InfoCard>
           <InfoCard icon={Phone} title="Call">
-            <a href="tel:+22300000000" className="hover:text-primary">+223 00 00 00 00</a>
+            <a href="tel:+22394600000" className="hover:text-primary">+223 94 60 00 00</a>
           </InfoCard>
           <InfoCard icon={Mail} title="Email">
-            <a href="mailto:contact@nigroupmali.com" className="hover:text-primary">contact@nigroupmali.com</a>
+            <a href="mailto:admin@nigroupmali.com" className="hover:text-primary">admin@nigroupmali.com</a>
           </InfoCard>
           <InfoCard icon={Clock} title="Hours">
             Mon–Fri 8:00–18:00<br />Sat 9:00–14:00
           </InfoCard>
           <a
-            href="https://wa.me/22300000000"
+            href="https://wa.me/22394600000"
             target="_blank" rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-6 py-4 text-base font-semibold text-white shadow-card transition hover:opacity-90"
           >
