@@ -2,9 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Shield, Truck, Award, Hammer, CheckCircle2, MessageCircle } from "lucide-react";
 import { PageLayout } from "@/components/site/PageLayout";
 import hero from "@/assets/hero-construction.jpg";
-import adhesive from "@/assets/product-adhesive.jpg";
+import adhesiveAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
 import materials from "@/assets/product-materials.jpg";
 import project1 from "@/assets/project-1.jpg";
+const adhesive = adhesiveAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
