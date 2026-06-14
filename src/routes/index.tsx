@@ -55,7 +55,7 @@ function Home() {
                 Request a Quote <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="https://wa.me/22300000000"
+                href="https://wa.me/22394600000"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-whatsapp px-6 py-3.5 text-sm font-semibold text-white transition hover:opacity-90"
               >
@@ -183,7 +183,7 @@ function Home() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact" className="rounded-md bg-background px-6 py-3.5 text-sm font-semibold text-primary hover:bg-background/90">Request a Quote</Link>
-              <a href="https://wa.me/22300000000" target="_blank" rel="noopener noreferrer" className="rounded-md bg-whatsapp px-6 py-3.5 text-sm font-semibold text-white">WhatsApp</a>
+              <a href="https://wa.me/22394600000" target="_blank" rel="noopener noreferrer" className="rounded-md bg-whatsapp px-6 py-3.5 text-sm font-semibold text-white">WhatsApp</a>
             </div>
           </div>
         </div>

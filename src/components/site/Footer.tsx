@@ -30,8 +30,8 @@ export function Footer() {
           <div className="eyebrow text-primary-foreground/80">Contact</div>
           <ul className="mt-4 space-y-3 text-sm text-steel-foreground/80">
             <li className="flex gap-2"><MapPin className="h-4 w-4 shrink-0 mt-0.5" /> Zone Industrielle, Bamako, Mali</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 shrink-0 mt-0.5" /> +223 00 00 00 00</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 shrink-0 mt-0.5" /> contact@nigroupmali.com</li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 shrink-0 mt-0.5" /> +223 94 60 00 00</li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 shrink-0 mt-0.5" /> admin@nigroupmali.com</li>
           </ul>
         </div>
         <div>

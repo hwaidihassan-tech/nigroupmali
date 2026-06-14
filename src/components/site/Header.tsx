@@ -41,11 +41,11 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:+22300000000"
+            href="tel:+22394600000"
             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary"
           >
             <Phone className="h-4 w-4" />
-            +223 00 00 00 00
+            +223 94 60 00 00
           </a>
           <Link
             to="/contact"

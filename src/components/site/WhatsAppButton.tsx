@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "22300000000"; // replace with real number
+const WHATSAPP_NUMBER = "22394600000"; // replace with real number
 
 export function WhatsAppButton() {
   const msg = encodeURIComponent("Hello NI Group Mali, I'd like a quote.");
