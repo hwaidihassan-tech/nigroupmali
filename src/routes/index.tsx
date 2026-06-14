@@ -114,8 +114,8 @@ function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <article className="group overflow-hidden rounded-xl bg-card border border-border shadow-card">
-              <div className="aspect-[16/10] overflow-hidden">
-                <img src={adhesive} alt="NI Group ceramic tile adhesive" width={1024} height={1024} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                <img src={adhesive} alt="NI Group Ciment-Colle tile adhesive 25kg bag" width={1024} height={1024} loading="lazy" className="h-full w-full object-contain transition duration-700 group-hover:scale-105" />
               </div>
               <div className="p-6">
                 <div className="eyebrow">Adhesives</div>
