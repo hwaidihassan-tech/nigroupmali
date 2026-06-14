@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { CheckCircle2 } from "lucide-react";
-import adhesive from "@/assets/product-adhesive.jpg";
+import adhesiveAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
 import materials from "@/assets/product-materials.jpg";
+const adhesive = adhesiveAsset.url;
 
 export const Route = createFileRoute("/products")({
   head: () => ({
