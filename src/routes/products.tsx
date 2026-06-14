@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { CheckCircle2 } from "lucide-react";
-import adhesive from "@/assets/product-adhesive.jpg";
+import adhesiveAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
 import materials from "@/assets/product-materials.jpg";
+const adhesive = adhesiveAsset.url;
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -23,9 +24,9 @@ const products = [
   {
     image: adhesive,
     cat: "Tile Adhesive",
-    name: "NI Bond Standard",
-    desc: "Cement-based powder adhesive for ceramic tiles on walls and floors. Strong grip and easy mixing.",
-    specs: ["25 kg bag", "Interior use", "Open time: 20 min"],
+    name: "NI-Group Ciment-Colle",
+    desc: "High-performance cement-based tile adhesive for interior & exterior floors and walls. Spanish-quality formula adapted to Malian climate.",
+    specs: ["25 kg bag", "Interior & exterior · Sols & Murs", "Open time: 20 min", "CE / C2 TE · A+ rated"],
   },
   {
     image: adhesive,
@@ -76,8 +77,8 @@ function Products() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
             <article key={p.name} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card">
-              <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                <img src={p.image} alt={p.name} width={1024} height={1024} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <div className="aspect-[4/3] overflow-hidden bg-secondary flex items-center justify-center">
+                <img src={p.image} alt={p.name} width={1024} height={1024} loading="lazy" className="h-full w-full object-contain transition duration-700 group-hover:scale-105" />
               </div>
               <div className="p-5 flex-1 flex flex-col">
                 <div className="eyebrow">{p.cat}</div>

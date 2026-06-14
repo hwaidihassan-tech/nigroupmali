@@ -2,9 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Shield, Truck, Award, Hammer, CheckCircle2, MessageCircle } from "lucide-react";
 import { PageLayout } from "@/components/site/PageLayout";
 import hero from "@/assets/hero-construction.jpg";
-import adhesive from "@/assets/product-adhesive.jpg";
+import adhesiveAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
 import materials from "@/assets/product-materials.jpg";
 import project1 from "@/assets/project-1.jpg";
+const adhesive = adhesiveAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -113,8 +114,8 @@ function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <article className="group overflow-hidden rounded-xl bg-card border border-border shadow-card">
-              <div className="aspect-[16/10] overflow-hidden">
-                <img src={adhesive} alt="NI Group ceramic tile adhesive" width={1024} height={1024} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                <img src={adhesive} alt="NI Group Ciment-Colle tile adhesive 25kg bag" width={1024} height={1024} loading="lazy" className="h-full w-full object-contain transition duration-700 group-hover:scale-105" />
               </div>
               <div className="p-6">
                 <div className="eyebrow">Adhesives</div>
