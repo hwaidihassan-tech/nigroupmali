@@ -1,53 +1,40 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { CheckCircle2 } from "lucide-react";
-import adhesiveAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
+import adhesiveBlueAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
+import adhesiveOrangeAsset from "@/assets/ni-group-ciment-colle-orange.png.asset.json";
+import adhesiveRedAsset from "@/assets/ni-group-ciment-colle-red.png.asset.json";
+import groutAsset from "@/assets/ni-grout.png.asset.json";
 import materials from "@/assets/product-materials.jpg";
-const adhesive = adhesiveAsset.url;
-
-export const Route = createFileRoute("/products")({
-  head: () => ({
-    meta: [
-      { title: "Products — Tile Adhesive & Construction Materials | NI Group Mali" },
-      { name: "description", content: "Browse ceramic tile adhesive, cement, grouts and construction materials available across Mali from NI Group." },
-      { name: "keywords", content: "tile adhesive Mali, ceramic adhesive, construction materials Mali, building products, mortar, grout" },
-      { property: "og:title", content: "Products | NI Group Mali" },
-      { property: "og:description", content: "Premium tile adhesive and construction materials supplied across Mali." },
-      { property: "og:url", content: "/products" },
-    ],
-    links: [{ rel: "canonical", href: "/products" }],
-  }),
-  component: Products,
-});
 
 const products = [
   {
-    image: adhesive,
+    image: adhesiveBlueAsset.url,
     cat: "Tile Adhesive",
-    name: "NI-Group Ciment-Colle",
+    name: "NI-Group Ciment-Colle — Blue",
     desc: "High-performance cement-based tile adhesive for interior & exterior floors and walls. Spanish-quality formula adapted to Malian climate.",
-    specs: ["25 kg bag", "Interior & exterior · Sols & Murs", "Open time: 20 min", "CE / C2 TE · A+ rated"],
+    specs: ["25 kg bag", "Sols & Murs · Intérieurs & Extérieurs", "Temps ouvert: 20 min", "CE / C2 TE · A+ rated"],
   },
   {
-    image: adhesive,
+    image: adhesiveOrangeAsset.url,
     cat: "Tile Adhesive",
-    name: "NI Bond Pro Flex",
-    desc: "Flexible high-performance adhesive for porcelain and large-format tiles, indoor and outdoor.",
-    specs: ["25 kg bag", "Interior & exterior", "C2TE classification"],
+    name: "NI-Group Ciment-Colle — Orange",
+    desc: "Premium tile adhesive with strong adhesion and high elasticity. Perfect for all types of tiles, marble and granite.",
+    specs: ["25 kg bag", "Forte adhérence & élasticité", "Étanche contre l'humidité", "CE / A+ certified"],
   },
   {
-    image: adhesive,
+    image: adhesiveRedAsset.url,
     cat: "Tile Adhesive",
-    name: "NI Stone Marble",
-    desc: "White adhesive engineered for natural stone, marble and translucent tiles.",
-    specs: ["25 kg bag", "White cement base", "Non-staining"],
+    name: "NI-Group Ciment-Colle — Red",
+    desc: "Heavy-duty cement-based adhesive engineered for demanding applications, interior and exterior, walls and floors.",
+    specs: ["25 kg bag", "Très longue durée de vie", "Formule améliorée", "Spanish quality formula"],
   },
   {
-    image: materials,
+    image: groutAsset.url,
     cat: "Grout & Joints",
-    name: "NI Joint Color",
-    desc: "Decorative tile grout in multiple shades, mildew-resistant and water-repellent.",
-    specs: ["5 kg bag", "12 colors", "Joint width 1–10 mm"],
+    name: "NI Grout — Waterproof Tile Grout",
+    desc: "Waterproof, anti-mold tile grout for joints 1–8 mm. Strong adhesion, smooth finish, for interior & exterior walls and floors.",
+    specs: ["5 kg bag (±2%)", "Joints 1–8 mm", "Water repellent · Anti-mold", "Colors: White, Gray, Beige, Black, Silver"],
   },
   {
     image: materials,
