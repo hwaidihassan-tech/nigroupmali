@@ -7,6 +7,21 @@ import adhesiveRedAsset from "@/assets/ni-group-ciment-colle-red.png.asset.json"
 import groutAsset from "@/assets/ni-grout.png.asset.json";
 import materials from "@/assets/product-materials.jpg";
 
+export const Route = createFileRoute("/products")({
+  head: () => ({
+    meta: [
+      { title: "Products — Tile Adhesive & Construction Materials | NI Group Mali" },
+      { name: "description", content: "Browse ceramic tile adhesive, cement, grouts and construction materials available across Mali from NI Group." },
+      { name: "keywords", content: "tile adhesive Mali, ceramic adhesive, construction materials Mali, building products, mortar, grout" },
+      { property: "og:title", content: "Products | NI Group Mali" },
+      { property: "og:description", content: "Premium tile adhesive and construction materials supplied across Mali." },
+      { property: "og:url", content: "/products" },
+    ],
+    links: [{ rel: "canonical", href: "/products" }],
+  }),
+  component: Products,
+});
+
 const products = [
   {
     image: adhesiveBlueAsset.url,
