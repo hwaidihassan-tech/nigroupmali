@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { CheckCircle2 } from "lucide-react";
-import adhesiveBlueAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
+import adhesiveBlueAsset from "@/assets/ni-group-ciment-colle-blue.jpg.asset.json";
 import adhesiveOrangeAsset from "@/assets/ni-group-ciment-colle-orange.png.asset.json";
 import adhesiveRedAsset from "@/assets/ni-group-ciment-colle-red.png.asset.json";
 import groutAsset from "@/assets/ni-grout.png.asset.json";

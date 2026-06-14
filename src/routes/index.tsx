@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Shield, Truck, Award, Hammer, CheckCircle2, MessageCircle } from "lucide-react";
 import { PageLayout } from "@/components/site/PageLayout";
 import hero from "@/assets/hero-construction.jpg";
-import adhesiveAsset from "@/assets/ni-group-ciment-colle.png.asset.json";
+import adhesiveAsset from "@/assets/ni-group-ciment-colle-blue.jpg.asset.json";
 import materials from "@/assets/product-materials.jpg";
 import project1 from "@/assets/project-1.jpg";
 const adhesive = adhesiveAsset.url;
