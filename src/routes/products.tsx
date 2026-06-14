@@ -77,8 +77,8 @@ function Products() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
             <article key={p.name} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card">
-              <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                <img src={p.image} alt={p.name} width={1024} height={1024} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <div className="aspect-[4/3] overflow-hidden bg-secondary flex items-center justify-center">
+                <img src={p.image} alt={p.name} width={1024} height={1024} loading="lazy" className="h-full w-full object-contain transition duration-700 group-hover:scale-105" />
               </div>
               <div className="p-5 flex-1 flex flex-col">
                 <div className="eyebrow">{p.cat}</div>
