@@ -1,17 +1,22 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Globe } from "lucide-react";
 import { useState } from "react";
-
-const nav = [
-  { to: "/", label: "Home" },
-  { to: "/products", label: "Products" },
-  { to: "/projects", label: "Projects" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-] as const;
+import { useT } from "@/lib/i18n";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { t, lang, setLang } = useT();
+
+  const nav = [
+    { to: "/", label: t("nav.home") },
+    { to: "/products", label: t("nav.products") },
+    { to: "/projects", label: t("nav.projects") },
+    { to: "/about", label: t("nav.about") },
+    { to: "/contact", label: t("nav.contact") },
+  ] as const;
+
+  const toggleLang = () => setLang(lang === "en" ? "fr" : "en");
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
@@ -40,6 +45,14 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={toggleLang}
+            aria-label={t("lang.switch.aria")}
+            className="flex items-center gap-1.5 rounded-md border border-border px-2.5 py-2 text-xs font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary hover:border-primary"
+          >
+            <Globe className="h-3.5 w-3.5" />
+            {t("lang.switch")}
+          </button>
           <a
             href="tel:+22394600000"
             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary"
@@ -51,17 +64,27 @@ export function Header() {
             to="/contact"
             className="rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-deep"
           >
-            Request a Quote
+            {t("cta.quote")}
           </Link>
         </div>
 
-        <button
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
-          className="md:hidden grid h-10 w-10 place-items-center rounded-md border border-border"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleLang}
+            aria-label={t("lang.switch.aria")}
+            className="flex items-center gap-1 rounded-md border border-border px-2 py-1.5 text-xs font-semibold uppercase"
+          >
+            <Globe className="h-3.5 w-3.5" />
+            {t("lang.switch")}
+          </button>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+            className="grid h-10 w-10 place-items-center rounded-md border border-border"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -84,7 +107,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-primary px-4 py-3 text-center text-base font-semibold text-primary-foreground"
             >
-              Request a Quote
+              {t("cta.quote")}
             </Link>
           </div>
         </div>

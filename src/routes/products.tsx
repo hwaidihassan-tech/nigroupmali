@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
 import { CheckCircle2 } from "lucide-react";
+import { useT } from "@/lib/i18n";
 import adhesiveBlueAsset from "@/assets/ni-group-ciment-colle-blue.jpg.asset.json";
 import adhesiveOrangeAsset from "@/assets/ni-group-ciment-colle-orange.png.asset.json";
 import adhesiveRedAsset from "@/assets/ni-group-ciment-colle-red.png.asset.json";
 import groutAsset from "@/assets/ni-grout.png.asset.json";
 import shieldAsset from "@/assets/ni-shield.png.asset.json";
 import wallAsset from "@/assets/ni-wall.png.asset.json";
-
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -24,58 +24,42 @@ export const Route = createFileRoute("/products")({
   component: Products,
 });
 
-const products = [
-  {
-    image: adhesiveBlueAsset.url,
-    cat: "Tile Adhesive",
-    name: "NI-Group Ciment-Colle — Blue",
-    desc: "High-performance cement-based tile adhesive for interior & exterior floors and walls. Spanish-quality formula adapted to Malian climate.",
-    specs: ["25 kg bag", "Sols & Murs · Intérieurs & Extérieurs", "Temps ouvert: 20 min", "CE / C2 TE · A+ rated"],
-  },
-  {
-    image: adhesiveOrangeAsset.url,
-    cat: "Tile Adhesive",
-    name: "NI-Group Ciment-Colle — Orange",
-    desc: "Premium tile adhesive with strong adhesion and high elasticity. Perfect for all types of tiles, marble and granite.",
-    specs: ["25 kg bag", "Forte adhérence & élasticité", "Étanche contre l'humidité", "CE / A+ certified"],
-  },
-  {
-    image: adhesiveRedAsset.url,
-    cat: "Tile Adhesive",
-    name: "NI-Group Ciment-Colle — Red",
-    desc: "Heavy-duty cement-based adhesive engineered for demanding applications, interior and exterior, walls and floors.",
-    specs: ["25 kg bag", "Très longue durée de vie", "Formule améliorée", "Spanish quality formula"],
-  },
-  {
-    image: groutAsset.url,
-    cat: "Grout & Joints",
-    name: "NI Grout — Waterproof Tile Grout",
-    desc: "Waterproof, anti-mold tile grout for joints 1–8 mm. Strong adhesion, smooth finish, for interior & exterior walls and floors.",
-    specs: ["5 kg bag (±2%)", "Joints 1–8 mm", "Water repellent · Anti-mold", "Colors: White, Gray, Beige, Black, Silver"],
-  },
-  {
-    image: shieldAsset.url,
-    cat: "Exterior Coating",
-    name: "NI Shield — Enduit Extérieur",
-    desc: "Weather-resistant exterior coating for facades, exterior walls and fences. Hydrofuge, UV resistant, durable and anti-cracking.",
-    specs: ["25 kg bag (±2%)", "Hydrofuge · Résiste aux UV", "Durable · Anti-fissuration", "Excellente adhérence · Application facile"],
-  },
-  {
-    image: wallAsset.url,
-    cat: "Interior Finish",
-    name: "NI Wall — Enduit de Finition",
-    desc: "Smooth finishing coat for interior walls. Ultra-smooth surface, crack resistant, high whiteness and easy to sand.",
-    specs: ["20 kg bag (±2%)", "Surface ultra lisse · Haute blancheur", "Résistant aux fissures · Ponçage facile", "Idéal: maisons, bureaux, hôtels"],
-  },
-];
-
 function Products() {
+  const { t, lang } = useT();
+
+  const specsEn = {
+    blue: ["25 kg bag", "Sols & Murs · Intérieurs & Extérieurs", "Temps ouvert: 20 min", "CE / C2 TE · A+ rated"],
+    orange: ["25 kg bag", "Forte adhérence & élasticité", "Étanche contre l'humidité", "CE / A+ certified"],
+    red: ["25 kg bag", "Très longue durée de vie", "Formule améliorée", "Spanish quality formula"],
+    grout: ["5 kg bag (±2%)", "Joints 1–8 mm", "Water repellent · Anti-mold", "Colors: White, Gray, Beige, Black, Silver"],
+    shield: ["25 kg bag (±2%)", "Hydrofuge · UV resistant", "Durable · Anti-cracking", "Excellent adhesion · Easy application"],
+    wall: ["20 kg bag (±2%)", "Ultra-smooth surface · High whiteness", "Crack resistant · Easy to sand", "Ideal: homes, offices, hotels"],
+  };
+  const specsFr = {
+    blue: ["Sac de 25 kg", "Sols & murs · Intérieurs & extérieurs", "Temps ouvert : 20 min", "CE / C2 TE · A+"],
+    orange: ["Sac de 25 kg", "Forte adhérence & élasticité", "Étanche contre l'humidité", "Certifié CE / A+"],
+    red: ["Sac de 25 kg", "Très longue durée de vie", "Formule améliorée", "Formule de qualité espagnole"],
+    grout: ["Sac de 5 kg (±2 %)", "Joints 1–8 mm", "Hydrofuge · Anti-moisissures", "Couleurs : Blanc, Gris, Beige, Noir, Argent"],
+    shield: ["Sac de 25 kg (±2 %)", "Hydrofuge · Résiste aux UV", "Durable · Anti-fissuration", "Excellente adhérence · Application facile"],
+    wall: ["Sac de 20 kg (±2 %)", "Surface ultra lisse · Haute blancheur", "Résistant aux fissures · Ponçage facile", "Idéal : maisons, bureaux, hôtels"],
+  };
+  const S = lang === "fr" ? specsFr : specsEn;
+
+  const products = [
+    { image: adhesiveBlueAsset.url, cat: t("products.cat.adhesive"), name: t("products.blue.name"), desc: t("products.blue.desc"), specs: S.blue },
+    { image: adhesiveOrangeAsset.url, cat: t("products.cat.adhesive"), name: t("products.orange.name"), desc: t("products.orange.desc"), specs: S.orange },
+    { image: adhesiveRedAsset.url, cat: t("products.cat.adhesive"), name: t("products.red.name"), desc: t("products.red.desc"), specs: S.red },
+    { image: groutAsset.url, cat: t("products.cat.grout"), name: t("products.grout.name"), desc: t("products.grout.desc"), specs: S.grout },
+    { image: shieldAsset.url, cat: t("products.cat.exterior"), name: t("products.shield.name"), desc: t("products.shield.desc"), specs: S.shield },
+    { image: wallAsset.url, cat: t("products.cat.interior"), name: t("products.wall.name"), desc: t("products.wall.desc"), specs: S.wall },
+  ];
+
   return (
     <PageLayout>
       <PageHero
-        eyebrow="Catalog"
-        title="Tile adhesive & construction materials"
-        subtitle="A complete range of bonded, certified products for professional contractors and resellers across Mali."
+        eyebrow={t("products.eyebrow")}
+        title={t("products.title")}
+        subtitle={t("products.subtitle")}
       />
       <section className="container-page py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -96,7 +80,7 @@ function Products() {
                   ))}
                 </ul>
                 <Link to="/contact" className="mt-5 inline-flex justify-center rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary-deep">
-                  Request Pricing
+                  {t("products.pricing")}
                 </Link>
               </div>
             </article>
