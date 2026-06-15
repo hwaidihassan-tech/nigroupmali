@@ -54,6 +54,20 @@ const products = [
     specs: ["5 kg bag (±2%)", "Joints 1–8 mm", "Water repellent · Anti-mold", "Colors: White, Gray, Beige, Black, Silver"],
   },
   {
+    image: shieldAsset.url,
+    cat: "Exterior Coating",
+    name: "NI Shield — Enduit Extérieur",
+    desc: "Weather-resistant exterior coating for facades, exterior walls and fences. Hydrofuge, UV resistant, durable and anti-cracking.",
+    specs: ["25 kg bag (±2%)", "Hydrofuge · Résiste aux UV", "Durable · Anti-fissuration", "Excellente adhérence · Application facile"],
+  },
+  {
+    image: wallAsset.url,
+    cat: "Interior Finish",
+    name: "NI Wall — Enduit de Finition",
+    desc: "Smooth finishing coat for interior walls. Ultra-smooth surface, crack resistant, high whiteness and easy to sand.",
+    specs: ["20 kg bag (±2%)", "Surface ultra lisse · Haute blancheur", "Résistant aux fissures · Ponçage facile", "Idéal: maisons, bureaux, hôtels"],
+  },
+  {
     image: materials,
     cat: "Mortar",
     name: "NI Mortar Plus",
