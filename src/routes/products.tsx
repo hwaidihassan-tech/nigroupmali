@@ -7,7 +7,7 @@ import adhesiveRedAsset from "@/assets/ni-group-ciment-colle-red.png.asset.json"
 import groutAsset from "@/assets/ni-grout.png.asset.json";
 import shieldAsset from "@/assets/ni-shield.png.asset.json";
 import wallAsset from "@/assets/ni-wall.png.asset.json";
-import materials from "@/assets/product-materials.jpg";
+
 
 export const Route = createFileRoute("/products")({
   head: () => ({
