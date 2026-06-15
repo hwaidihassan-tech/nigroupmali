@@ -7,7 +7,7 @@ import adhesiveRedAsset from "@/assets/ni-group-ciment-colle-red.png.asset.json"
 import groutAsset from "@/assets/ni-grout.png.asset.json";
 import shieldAsset from "@/assets/ni-shield.png.asset.json";
 import wallAsset from "@/assets/ni-wall.png.asset.json";
-import materials from "@/assets/product-materials.jpg";
+
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -66,20 +66,6 @@ const products = [
     name: "NI Wall — Enduit de Finition",
     desc: "Smooth finishing coat for interior walls. Ultra-smooth surface, crack resistant, high whiteness and easy to sand.",
     specs: ["20 kg bag (±2%)", "Surface ultra lisse · Haute blancheur", "Résistant aux fissures · Ponçage facile", "Idéal: maisons, bureaux, hôtels"],
-  },
-  {
-    image: materials,
-    cat: "Mortar",
-    name: "NI Mortar Plus",
-    desc: "All-purpose masonry mortar for blockwork, plastering and general site work.",
-    specs: ["40 kg bag", "Quick setting", "High workability"],
-  },
-  {
-    image: materials,
-    cat: "Waterproofing",
-    name: "NI Seal Coat",
-    desc: "Flexible cementitious waterproofing for terraces, bathrooms and water tanks.",
-    specs: ["20 kg kit", "2-component", "UV resistant"],
   },
 ];
 
