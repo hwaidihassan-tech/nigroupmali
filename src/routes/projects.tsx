@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout, PageHero } from "@/components/site/PageLayout";
+import { useT } from "@/lib/i18n";
 import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
@@ -18,22 +19,33 @@ export const Route = createFileRoute("/projects")({
   component: Projects,
 });
 
-const projects = [
-  { img: p1, title: "Hôtel Niger Résidence", loc: "Bamako", year: "2024", scope: "Tile adhesive, grout, waterproofing — 4,200 m²" },
-  { img: p2, title: "ABC Tower Office Complex", loc: "Bamako, ACI 2000", year: "2024", scope: "Façade tile adhesive — 6,000 m²" },
-  { img: p3, title: "Grand Hotel Lobby Renovation", loc: "Bamako", year: "2023", scope: "Stone & marble adhesive — 2,800 m²" },
-  { img: p1, title: "Sikasso Residential Towers", loc: "Sikasso", year: "2023", scope: "Mortar & adhesive supply — 12 units" },
-  { img: p2, title: "Commercial Center Façade", loc: "Ségou", year: "2022", scope: "Exterior tile adhesive — 3,500 m²" },
-  { img: p3, title: "Banking HQ Interior", loc: "Bamako", year: "2022", scope: "Premium adhesive & grout — 1,900 m²" },
-];
-
 function Projects() {
+  const { t, lang } = useT();
+
+  const projectsEn = [
+    { img: p1, title: "Hôtel Niger Résidence", loc: "Bamako", year: "2024", scope: "Tile adhesive, grout, waterproofing — 4,200 m²" },
+    { img: p2, title: "ABC Tower Office Complex", loc: "Bamako, ACI 2000", year: "2024", scope: "Façade tile adhesive — 6,000 m²" },
+    { img: p3, title: "Grand Hotel Lobby Renovation", loc: "Bamako", year: "2023", scope: "Stone & marble adhesive — 2,800 m²" },
+    { img: p1, title: "Sikasso Residential Towers", loc: "Sikasso", year: "2023", scope: "Mortar & adhesive supply — 12 units" },
+    { img: p2, title: "Commercial Center Façade", loc: "Ségou", year: "2022", scope: "Exterior tile adhesive — 3,500 m²" },
+    { img: p3, title: "Banking HQ Interior", loc: "Bamako", year: "2022", scope: "Premium adhesive & grout — 1,900 m²" },
+  ];
+  const projectsFr = [
+    { img: p1, title: "Hôtel Niger Résidence", loc: "Bamako", year: "2024", scope: "Colle à carrelage, joints, étanchéité — 4 200 m²" },
+    { img: p2, title: "Complexe de bureaux ABC Tower", loc: "Bamako, ACI 2000", year: "2024", scope: "Colle à carrelage de façade — 6 000 m²" },
+    { img: p3, title: "Rénovation du lobby du Grand Hôtel", loc: "Bamako", year: "2023", scope: "Colle pierre & marbre — 2 800 m²" },
+    { img: p1, title: "Tours résidentielles de Sikasso", loc: "Sikasso", year: "2023", scope: "Fourniture mortier & colle — 12 unités" },
+    { img: p2, title: "Façade Centre commercial", loc: "Ségou", year: "2022", scope: "Colle à carrelage extérieure — 3 500 m²" },
+    { img: p3, title: "Intérieur siège bancaire", loc: "Bamako", year: "2022", scope: "Colle & joints premium — 1 900 m²" },
+  ];
+  const projects = lang === "fr" ? projectsFr : projectsEn;
+
   return (
     <PageLayout>
       <PageHero
-        eyebrow="Projects"
-        title="Built with NI Group."
-        subtitle="A selection of buildings across Mali — hotels, offices and residences — bonded together with our materials."
+        eyebrow={t("projects.eyebrow")}
+        title={t("projects.title")}
+        subtitle={t("projects.subtitle")}
       />
       <section className="container-page py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
