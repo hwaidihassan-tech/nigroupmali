@@ -84,6 +84,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "NI Group Mali" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "NI Group Mali — Tile Adhesive & Construction Materials" },
+      { name: "twitter:title", content: "NI Group Mali — Tile Adhesive & Construction Materials" },
+      { property: "og:description", content: "NI Group Mali — leading supplier of tile adhesive, ceramic adhesive and construction materials in Bamako and across Mali." },
+      { name: "twitter:description", content: "NI Group Mali — leading supplier of tile adhesive, ceramic adhesive and construction materials in Bamako and across Mali." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/77690c76-9613-497b-9604-bdc676522c97/id-preview-626633a9--07deacb9-14f5-43e2-8e53-da7ca6b30c93.lovable.app-1781488486364.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/77690c76-9613-497b-9604-bdc676522c97/id-preview-626633a9--07deacb9-14f5-43e2-8e53-da7ca6b30c93.lovable.app-1781488486364.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
