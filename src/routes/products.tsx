@@ -67,20 +67,6 @@ const products = [
     desc: "Smooth finishing coat for interior walls. Ultra-smooth surface, crack resistant, high whiteness and easy to sand.",
     specs: ["20 kg bag (±2%)", "Surface ultra lisse · Haute blancheur", "Résistant aux fissures · Ponçage facile", "Idéal: maisons, bureaux, hôtels"],
   },
-  {
-    image: materials,
-    cat: "Mortar",
-    name: "NI Mortar Plus",
-    desc: "All-purpose masonry mortar for blockwork, plastering and general site work.",
-    specs: ["40 kg bag", "Quick setting", "High workability"],
-  },
-  {
-    image: materials,
-    cat: "Waterproofing",
-    name: "NI Seal Coat",
-    desc: "Flexible cementitious waterproofing for terraces, bathrooms and water tanks.",
-    specs: ["20 kg kit", "2-component", "UV resistant"],
-  },
 ];
 
 function Products() {
